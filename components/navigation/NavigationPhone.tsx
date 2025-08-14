@@ -34,11 +34,11 @@ export default function NavigationPhone() {
     };
 
     const navItems = [
-        { name: 'Home', href: '/dashboard' },
-        { name: 'About', href: '/dashboard/body' },
-        { name: 'Services', href: '/dashboard/mind' },
-        { name: 'Events', href: '/dashboard/spirit' },
-        { name: 'Contact', href: '/dashboard/profile' },
+        { name: 'Main', href: '/' },
+        { name: 'Products', href: '/products' },
+        // { name: 'Services', href: '/dashboard/mind' },
+        // { name: 'Events', href: '/dashboard/spirit' },
+        // { name: 'Contact', href: '/dashboard/profile' },
     ];
 
     return (

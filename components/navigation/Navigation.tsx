@@ -9,10 +9,10 @@ function classNames(...classes: string[]) {
 export default async function Navigation() {
 
     const navigation = [
-        { name: 'Main', href: '/dashboard', current: false },
-        { name: 'Body', href: '/dashboard/body', current: false },
-        { name: 'Mind', href: '/dashboard/mind', current: false },
-        { name: 'Spirit', href: '/dashboard/spirit', current: false },
+        { name: 'Main', href: '/', current: false },
+        { name: 'Products', href: '/products', current: false },
+        // { name: 'Mind', href: '/dashboard/mind', current: false },
+        // { name: 'Spirit', href: '/dashboard/spirit', current: false },
     ]
 
     return (

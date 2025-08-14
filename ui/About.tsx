@@ -56,7 +56,7 @@ export default function About() {
                 viewport={{ once: true, amount: 0.5 }} // Trigger animation when 50% of the element is in view
             >
                 {/* Left Column: Image */}
-                <motion.div variants={imageVariants} className="relative w-full h-80 md:h-full rounded-lg shadow-2xl overflow-hidden">
+                <motion.div variants={imageVariants} className="relative h-80 md:h-full rounded-lg shadow-2xl overflow-hidden">
                     <Image
                         src={'/assets/seek_find_one.jpg'}
                         alt="Intricate LEGO construction"
