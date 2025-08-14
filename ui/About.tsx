@@ -35,7 +35,7 @@ const About = () => {
 
     // Animation variant for the text content to slide in from the right
     const textVariants: Variants = {
-        hidden: { x: 50, opacity: 0 },
+        hidden: { x: 20, opacity: 0 },
         visible: {
             x: 0,
             opacity: 1,
@@ -64,7 +64,7 @@ const About = () => {
                         // objectFit="cover"
                         width={595}
                         height={790}
-                        className="h-full object-cover w-full object-center transform hover:scale-105 transition-transform duration-500 ease-in-out"
+                        className="h-full object-cover object-center transform hover:scale-105 transition-transform duration-500 ease-in-out"
                     />
                 </motion.div>
 
