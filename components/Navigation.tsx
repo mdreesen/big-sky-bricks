@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 // import { current_year } from '@/lib/date_time';
+import Image from 'next/image';
 import Link from 'next/link';
-import { LegoIconThreeStacked, LegoIconX, LegoI } from '@/components/LegoIcon';
+import { LegoIconThreeStacked, LegoIconX } from '@/components/LegoIcon';
 
 export default function NavigationPhone() {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,13 +43,19 @@ export default function NavigationPhone() {
 
     return (
         <nav className="relative bg-transparent p-4 md:hidden">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center h-[2rem]">
                 {/* Logo/Brand Name */}
                 <Link href={'/'}>
-                    <div className="flex flex-col text-2xl lego-font text-gray-800">
-                        <span className='flex'>B<LegoI className="w-3 h-9 mx-px relative top-[-2px]" />g Sky</span>
+                    <div className="flex flex-col text-2xl lego-font">
 
-                        <span className='flex'>Br<LegoI className="w-3 h-9 mx-px relative top-[-2px]" />cks</span>
+                        <Image
+                            alt="Big Sky Bricks Logo"
+                            width={150}
+                            height={150}
+                            priority
+                            src={'/assets/logo.webp'}
+                            className="opacity-60 relative rounded-full object-cover scale-75 lg:hidden md:hidden"
+                        />
                     </div>
 
                 </Link>
