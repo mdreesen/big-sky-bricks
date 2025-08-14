@@ -8,7 +8,7 @@ import Image from 'next/image';
  * This component uses a two-column layout with scroll-triggered animations
  * to create a sophisticated and engaging user experience.
  */
-const About = () => {
+export default function About() {
     // Animation variants for the container to stagger children
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -85,5 +85,3 @@ const About = () => {
         </section>
     );
 };
-
-export default About;

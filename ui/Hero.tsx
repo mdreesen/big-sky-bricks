@@ -8,7 +8,7 @@ import { FaArrowRight } from 'react-icons/fa';
  * A modern, high-end hero section with a static LEGO background.
  * This component focuses on a clean aesthetic with subtle animations.
  */
-const HeroSection = () => {
+export default function Hero() {
     // Animation variants for the main text content container
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -81,5 +81,3 @@ const HeroSection = () => {
         </section>
     );
 };
-
-export default HeroSection;

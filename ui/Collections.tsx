@@ -37,7 +37,7 @@ const products = [
  * This component uses a clean grid layout with scroll-triggered animations
  * and hover effects to showcase product collections.
  */
-const ProductsSection = () => {
+export default function Collections() {
     // Animation variants for the container to stagger children
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -117,5 +117,3 @@ const ProductsSection = () => {
         </section>
     );
 };
-
-export default ProductsSection;

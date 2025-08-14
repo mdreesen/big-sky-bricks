@@ -34,7 +34,7 @@ const services: Service[] = [
  * This component uses a clean three-column layout with scroll-triggered animations
  * to highlight the premium services offered.
  */
-const Services = () => {
+export default function Services() {
     // Animation variants for the container to stagger children
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -99,5 +99,3 @@ const Services = () => {
         </section>
     );
 };
-
-export default Services;

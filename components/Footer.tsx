@@ -1,10 +1,10 @@
 'use client';
 import Image from 'next/image';
-import { FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { current_year } from '@/lib/date';
 
 
-const Footer = () => {
+export default function Footer() {
     return (
         <footer className="bg-gray-800 text-white">
             <div className="container mx-auto px-6 py-16">
@@ -51,5 +51,3 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;
