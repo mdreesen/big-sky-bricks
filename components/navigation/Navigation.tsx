@@ -22,7 +22,7 @@ export default async function Navigation() {
                     <div className="flex h-16 items-center justify-between px-4 sm:px-0">
                         <div className="flex items-center">
                             <div className="shrink-0">
-                                <Link href={'/dashboard'}>
+                                <Link href={'/'}>
                                     <div className="flex items-center h-[40px] text-2xl font-bold">
                                         <Image
                                             alt="Big Sky Bricks Logo"
