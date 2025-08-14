@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif; */
 }
+
+.bg-lego-yellow {
+  background-color: #f6ec35;
+}
+.bg-lego-red {
+  background-color: #d11013;
+}
+.text-lego-yellow {
+  color: #f6ec35;
+}

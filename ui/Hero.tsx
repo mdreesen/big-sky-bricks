@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
@@ -55,7 +56,7 @@ const HeroSection = () => {
                 animate="visible"
             >
                 <motion.h1
-                    className="text-5xl md:text-8xl lego-font text-[#f6ec35] font-bold"
+                    className="text-5xl md:text-8xl lego-font text-lego-yellow font-bold"
                     variants={itemVariants}
                 >
                     Big Sky Bricks
@@ -67,12 +68,14 @@ const HeroSection = () => {
                     Where creativity clicks. Discover premium sets for the modern builder.
                 </motion.p>
                 <motion.div variants={itemVariants}>
+                    <Link href={'#collections'}>
                     <button
-                        className="mt-8 flex items-center gap-3 bg-[#d11013] text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+                        className="mt-8 flex items-center gap-3 bg-lego-red text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
                     >
                         Explore Collections
                         <FaArrowRight />
                     </button>
+                    </Link>
                 </motion.div>
             </motion.div>
         </section>
