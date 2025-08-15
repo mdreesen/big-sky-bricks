@@ -14,7 +14,7 @@ const events = [
         time: '7:00 PM - 10:00 PM',
         location: 'Big Sky Bricks Showroom, Evergreen, MT',
         description: 'An exclusive 21+ evening of complex builds, craft beers, and good company. Challenge your skills with our featured Technic sets.',
-        imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: '/assets/events/adult_night.webp',
         googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Adults+Night%3A+LEGO+%26+Libations&dates=20250823T010000Z/20250823T040000Z&details=An+exclusive+21%2B+evening+of+complex+builds%2C+craft+beers%2C+and+good+company.+Challenge+your+skills+with+our+featured+Technic+sets.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
     },
     {
@@ -24,7 +24,7 @@ const events = [
         time: '1:00 PM - 3:00 PM',
         location: 'Kalispell Community Center',
         description: 'Ready, set, build! A fun-filled afternoon for our younger builders (ages 6-12) to test their speed and creativity for prizes.',
-        imageUrl: 'https://images.unsplash.com/photo-1555994285-a614a5e6191b?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: '/assets/events/speed_challenge.webp',
         googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Kids%27+Speed+Build+Challenge&dates=20250830T190000Z/20250830T210000Z&details=Ready%2C+set%2C+build!+A+fun-filled+afternoon+for+our+younger+builders+(ages+6-12)+to+test+their+speed+and+creativity+for+prizes.&location=Kalispell+Community+Center',
     },
     {
@@ -34,7 +34,7 @@ const events = [
         time: '10:00 AM - 4:00 PM',
         location: 'Big Sky Bricks Showroom, Evergreen, MT',
         description: 'Explore incredible My Own Creations (MOCs) from talented builders across the state. A day of inspiration and community.',
-        imageUrl: 'https://images.unsplash.com/photo-1633436383961-8744c4a331a1?q=80&w=2874&auto=format&fit=crop',
+        imageUrl: '/assets/events/montana_moc_showcase.webp',
         googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Montana+MOC+Showcase&dates=20250920T160000Z/20250920T220000Z&details=Explore+incredible+My+Own+Creations+(MOCs)+from+talented+builders+across+the+state.+A+day+of+inspiration+and+community.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
     },
 ];
@@ -44,24 +44,24 @@ const birthdayPackages = [
     {
         icon: FaCube,
         title: 'Builder Package',
-        price: '$250',
-        features: ['Up to 10 guests', '90 minutes of party time', 'Guided free build session', 'Small take-home LEGO set for each guest'],
+        price: '$125',
+        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Guided free build session', 'Small take-home LEGO set for each guest'],
         color: 'blue',
         googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-builder-package',
     },
     {
         icon: FaUserFriends,
         title: 'Master Builder Package',
-        price: '$400',
-        features: ['Up to 15 guests', '2 hours of party time', 'Themed build challenge (e.g., Star Wars, Castles)', 'Personalized birthday banner', 'Medium take-home LEGO set for each guest'],
+        price: '$200',
+        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Bricks provided for building', 'Themed build challenge (e.g., Star Wars, Castles)', 'Special gift for birthday child'],
         color: 'red',
         googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-master-builder-package',
     },
     {
         icon: FaBirthdayCake,
         title: 'Ultimate Creator Package',
-        price: '$600',
-        features: ['Up to 20 guests', '3 hours of party time', 'Everything in Master Builder, plus:', 'Custom LEGO birthday cake design', 'Exclusive large LEGO set for the birthday child'],
+        price: '$325',
+        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Everything in Master Builder, plus:', 'Custom LEGO® building activity', 'LEGO® Mini-Figure building activity', 'Party host', 'Exclusive Take home brick bag for birthday child'],
         color: 'yellow',
         googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-ultimate-creator-package',
     },
@@ -110,7 +110,7 @@ const Events = () => {
                             className="bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-3"
                         >
                             <div className="relative w-full h-64 md:h-full">
-                                {/* <Image src={event.imageUrl} alt={event.title || ''} layout="fill" objectFit="cover" /> */}
+                                <Image src={event.imageUrl} alt={event.title || ''} width={700} height={700} className='h-full w-full object-cover' />
                             </div>
                             <div className="p-8 md:col-span-2">
                                 <h2 className="text-3xl font-bold text-gray-800 mb-4">{event.title}</h2>

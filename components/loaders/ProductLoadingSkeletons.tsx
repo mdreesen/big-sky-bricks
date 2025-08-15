@@ -1,9 +1,4 @@
-// src/app/products/loading.tsx
-import { FaTh, FaList } from 'react-icons/fa';
 
-/**
- * A single skeleton card component that mimics the layout of a product card.
- */
 const SkeletonCard = () => (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="w-full h-64 bg-gray-300" />
