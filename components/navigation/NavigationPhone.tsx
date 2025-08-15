@@ -103,7 +103,7 @@ export default function NavigationPhone() {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="fixed inset-0 bg-gray-950/95 backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-8"
+                        className="fixed inset-0 bg-lego-blue backdrop-blur-md z-40 flex flex-col items-center justify-center space-y-8"
                     >
                         <motion.ul
                             variants={staggerContainerVariants}
