@@ -118,10 +118,10 @@ export default function Products() {
                                 transition={{ type: 'spring', stiffness: 200, damping: 25 }}
                                 className="bg-white rounded-lg shadow-md overflow-hidden group"
                             >
-                                <div className="relative w-full h-64">
-                                    <Image src={product.imageUrl} alt={product.name} height={300} width={300} className="group-hover:scale-105 object-cover transition-transform duration-300" />
+                                <div className="relative w-full h-64 z-0">
+                                    <Image src={product.imageUrl} alt={product.name} height={100} width={300} className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <div className="p-6">
+                                <div className="p-6 z-10">
                                     <p className="text-sm text-gray-500 mb-1">{product.category}</p>
                                     <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
                                     <p className="text-lg font-semibold text-lego-blue">${product.price.toFixed(2)}</p>
