@@ -1,26 +1,27 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { current_year } from '@/lib/date';
 
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-800 text-white">
+        <footer className="bg-black text-white">
             <div className="container mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-items-center">
                     {/* Column 1: Logo and Brand */}
                     <div className="md:col-span-1">
-                        <a href="#" className="flex items-center gap-2 mb-4">
+                        <Link href="/" className="flex items-center gap-2 mb-4">
                             <Image
                                 alt="Big Sky Bricks Logo"
                                 width={150}
                                 height={150}
                                 priority
                                 src={'/assets/logo.webp'}
-                                className="opacity-60 relative rounded-full object-cover scale-75 lg:hidden md:hidden"
+                                className="opacity-60 relative rounded-full object-cover scale-75"
                             />
-                        </a>
+                        </Link>
                         <p className="text-gray-400 text-sm">
                             Your destination for all things LEGO in Kalispell, Montana.
                         </p>
@@ -44,7 +45,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="border-t border-gray-700">
-                <div className="container mx-auto px-6 py-6 text-center text-gray-500 text-sm">
+                <div className="container mx-auto px-6 py-6 text-center text-gray-400 text-sm">
                     <p>&copy; {current_year()} Big Sky Bricks. All Rights Reserved.</p>
                 </div>
             </div>

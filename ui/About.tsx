@@ -58,7 +58,7 @@ export default function About() {
                 {/* Left Column: Image */}
                 <motion.div variants={imageVariants} className="relative h-80 md:h-full rounded-lg shadow-2xl overflow-hidden">
                     <Image
-                        src={'/assets/seek_find_one.jpg'}
+                        src={'/assets/seek_find_one.webp'}
                         alt="Intricate LEGO construction"
                         // layout="fill"
                         // objectFit="cover"

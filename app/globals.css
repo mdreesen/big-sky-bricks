@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .bg-lego-yellow {
   background-color: #f6ec35;
 }

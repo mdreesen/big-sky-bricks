@@ -2,6 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Mock product data
@@ -11,14 +12,16 @@ const products = [
         name: 'The Architect Series',
         description: 'Iconic landmarks and structural marvels.',
         imageUrl: '/assets/collections/architect.webp',
-        width: 668,
-        height: 382
+        category: 'Architecture',
+        width: 1600,
+        height: 916
     },
     {
         id: 2,
         name: 'The Botanist Collection',
         description: 'Build everlasting floral arrangements.',
         imageUrl: '/assets/collections/botanist.webp',
+        category: 'Botanical',
         width: 668,
         height: 382
     },
@@ -27,6 +30,7 @@ const products = [
         name: 'The Explorer Collection',
         description: 'Travel through design and odyssey.',
         imageUrl: '/assets/collections/explorer.webp',
+        category: 'Explorer',
         width: 668,
         height: 382
     },
@@ -91,8 +95,6 @@ export default function Collections() {
                                 <Image
                                     src={product.imageUrl}
                                     alt={product.name}
-                                    // layout="fill"
-                                    // objectFit="cover"
                                     width={product.width}
                                     height={product.height}
                                     className="transition-transform duration-500 ease-in-out group-hover:scale-105"
@@ -103,12 +105,12 @@ export default function Collections() {
                             <div className="absolute bottom-0 left-0 p-8 text-white">
                                 <h3 className="text-3xl font-bold mb-2">{product.name}</h3>
                                 <p className="text-lg opacity-90 mb-4">{product.description}</p>
-                                <a
-                                    href="#"
+                                <Link
+                                    href={`/products?category=${product.category}`}
                                     className="flex items-center gap-2 font-semibold text-lego-yellow transition-all duration-300 transform group-hover:translate-x-2"
                                 >
                                     View Collection <FaArrowRight />
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

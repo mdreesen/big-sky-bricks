@@ -39,10 +39,10 @@ export default function Hero() {
             {/* Background Image */}
             <Image
                 alt="Lego Bricks Background"
-                width={662}
-                height={880}
+                width={1920}
+                height={2550}
                 priority
-                src={'/assets/bricks_three.jpg'}
+                src={'/assets/bricks_three.webp'}
                 className="absolute top-0 left-0 w-full h-full bg-cover bg-center object-cover z-0"
             />
             {/* Dark overlay for text contrast */}
