@@ -1,70 +1,13 @@
 'use client';
 
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
+import { homeCategories } from '@/lib/data';
+import { containerVariants, itemVariants } from '@/lib/variants';
 
-// Mock product data
-const products = [
-    {
-        id: 1,
-        name: 'The Architect Series',
-        description: 'Iconic landmarks and structural marvels.',
-        imageUrl: '/assets/collections/architect.webp',
-        category: 'Architecture',
-        width: 1600,
-        height: 916
-    },
-    {
-        id: 2,
-        name: 'The Botanist Collection',
-        description: 'Build everlasting floral arrangements.',
-        imageUrl: '/assets/collections/botanist.webp',
-        category: 'Botanical',
-        width: 668,
-        height: 382
-    },
-    {
-        id: 3,
-        name: 'The Explorer Collection',
-        description: 'Travel through design and odyssey.',
-        imageUrl: '/assets/collections/explorer.webp',
-        category: 'Explorer',
-        width: 668,
-        height: 382
-    },
-];
-
-/**
- * A modern, high-end "Our Products" section.
- * This component uses a clean grid layout with scroll-triggered animations
- * and hover effects to showcase product collections.
- */
 export default function Collections() {
-    // Animation variants for the container to stagger children
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.4,
-            },
-        },
-    };
-
-    // Animation variant for each product card to fade and slide in
-    const cardVariants: Variants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.3,
-                ease: 'easeOut',
-            },
-        },
-    };
 
     return (
         <section className="bg-gray-50 py-20 md:py-32" id='#collections'>
@@ -80,16 +23,16 @@ export default function Collections() {
 
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    variants={containerVariants}
+                    variants={containerVariants()}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    {products.map((product) => (
+                    {homeCategories().map((product) => (
                         <motion.div
                             key={product.id}
                             className="group relative rounded-lg overflow-hidden shadow-lg"
-                            variants={cardVariants}
+                            variants={itemVariants()}
                         >
                             <div className="relative w-full h-96">
                                 <Image

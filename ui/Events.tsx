@@ -1,90 +1,12 @@
-// src/app/events/page.tsx
 'use client';
 
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaBirthdayCake, FaCube, FaUserFriends } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { events, birthdayPackages } from '@/lib/data';
+import { containerVariants, itemVariants } from '@/lib/variants';
 
-// Mock event data with Google Calendar links
-const events = [
-    {
-        id: 1,
-        title: 'Adults Night: LEGO & Libations',
-        date: 'August 22, 2025',
-        time: '7:00 PM - 10:00 PM',
-        location: 'Big Sky Bricks Showroom, Evergreen, MT',
-        description: 'An exclusive 21+ evening of complex builds, craft beers, and good company. Challenge your skills with our featured Technic sets.',
-        imageUrl: '/assets/events/adult_night.webp',
-        googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Adults+Night%3A+LEGO+%26+Libations&dates=20250823T010000Z/20250823T040000Z&details=An+exclusive+21%2B+evening+of+complex+builds%2C+craft+beers%2C+and+good+company.+Challenge+your+skills+with+our+featured+Technic+sets.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
-    },
-    {
-        id: 2,
-        title: "Kids' Speed Build Challenge",
-        date: 'August 30, 2025',
-        time: '1:00 PM - 3:00 PM',
-        location: 'Kalispell Community Center',
-        description: 'Ready, set, build! A fun-filled afternoon for our younger builders (ages 6-12) to test their speed and creativity for prizes.',
-        imageUrl: '/assets/events/speed_challenge.webp',
-        googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Kids%27+Speed+Build+Challenge&dates=20250830T190000Z/20250830T210000Z&details=Ready%2C+set%2C+build!+A+fun-filled+afternoon+for+our+younger+builders+(ages+6-12)+to+test+their+speed+and+creativity+for+prizes.&location=Kalispell+Community+Center',
-    },
-    {
-        id: 3,
-        title: 'Montana MOC Showcase',
-        date: 'September 20, 2025',
-        time: '10:00 AM - 4:00 PM',
-        location: 'Big Sky Bricks Showroom, Evergreen, MT',
-        description: 'Explore incredible My Own Creations (MOCs) from talented builders across the state. A day of inspiration and community.',
-        imageUrl: '/assets/events/montana_moc_showcase.webp',
-        googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Montana+MOC+Showcase&dates=20250920T160000Z/20250920T220000Z&details=Explore+incredible+My+Own+Creations+(MOCs)+from+talented+builders+across+the+state.+A+day+of+inspiration+and+community.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
-    },
-];
-
-// Birthday party packages data with Google Calendar Appointment Scheduling links
-const birthdayPackages = [
-    {
-        icon: FaCube,
-        title: 'Builder Package',
-        price: '$125',
-        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Guided free build session', 'Small take-home LEGO set for each guest'],
-        color: 'blue',
-        googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-builder-package',
-    },
-    {
-        icon: FaUserFriends,
-        title: 'Master Builder Package',
-        price: '$200',
-        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Bricks provided for building', 'Themed build challenge (e.g., Star Wars, Castles)', 'Special gift for birthday child'],
-        color: 'red',
-        googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-master-builder-package',
-    },
-    {
-        icon: FaBirthdayCake,
-        title: 'Ultimate Creator Package',
-        price: '$325',
-        features: ['Up to 10 guests', '30 minute setup period', '90 minutes of party time', 'Everything in Master Builder, plus:', 'Custom LEGO® building activity', 'LEGO® Mini-Figure building activity', 'Party host', 'Exclusive Take home brick bag for birthday child'],
-        color: 'yellow',
-        googleAppointmentLink: 'https://calendar.google.com/calendar/appointments/schedules/your-unique-id-for-ultimate-creator-package',
-    },
-];
-
-
-/**
- * A modern, responsive page to display upcoming company events.
- */
-const Events = () => {
-
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.2 },
-        },
-    };
-
-    const itemVariants: Variants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
-    };
+export default function Events() {
 
     return (
         <div className="bg-gray-50">
@@ -99,14 +21,14 @@ const Events = () => {
                 {/* Upcoming Events Section */}
                 <motion.div
                     className="space-y-12"
-                    variants={containerVariants}
+                    variants={containerVariants()}
                     initial="hidden"
                     animate="visible"
                 >
-                     {events.map((event) => (
+                     {events().map((event) => (
                         <motion.div
                             key={event.id}
-                            variants={itemVariants}
+                            variants={itemVariants()}
                             className="bg-white rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-3"
                         >
                             <div className="relative w-full h-64 md:h-full">
@@ -152,15 +74,15 @@ const Events = () => {
 
                     <motion.div 
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                        variants={containerVariants}
+                        variants={containerVariants()}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
                     >
-                        {birthdayPackages.map((pkg) => (
+                        {birthdayPackages().map((pkg) => (
                             <motion.div 
                                 key={pkg.title}
-                                variants={itemVariants}
+                                variants={itemVariants()}
                                 className={`bg-white rounded-lg shadow-lg p-8 flex flex-col border-t-4 border-lego-${pkg.color}`}
                             >
                                 <div className="flex-grow">
@@ -189,5 +111,3 @@ const Events = () => {
         </div>
     );
 };
-
-export default Events;

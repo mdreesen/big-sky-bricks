@@ -1,38 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { products, categories } from '@/lib/data';
+import { containerVariants, productVariants } from '@/lib/variants';
 
-// Mock product data
-const allProducts = [
-    { id: 1, name: 'Eiffel Tower', category: 'Architecture', price: 629.99, imageUrl: '/assets/products/architecture/eiffel_tower.webp' },
-    { id: 2, name: 'Orchid Bloom', category: 'Botanical', price: 49.99, imageUrl: '/assets/products/botanical/orchid_bloom.webp' },
-    { id: 3, name: 'McLaren P1', category: 'Technic', price: 199.99, imageUrl: '/assets/products/technic/mcLaren_p_one.webp' },
-    { id: 4, name: 'The Globe', category: 'Ideas', price: 229.99, imageUrl: '/assets/products/ideas/globe.webp' },
-    { id: 5, name: 'Wildflower Bouquet', category: 'Botanical', price: 59.99, imageUrl: '/assets/products/botanical/wildflower_bouquet.webp' },
-    { id: 6, name: 'Lamborghini Sián', category: 'Technic', price: 449.99, imageUrl: '/assets/products/technic/lamborghini_sian.webp' },
-    { id: 7, name: 'Colosseum', category: 'Architecture', price: 549.99, imageUrl: '/assets/products/architecture/colosseum.webp' },
-    { id: 8, name: 'Motorized Lighthouse', category: 'Ideas', price: 299.99, imageUrl: '/assets/products/ideas/motorized_lighthouse.webp' },
-    { id: 9, name: 'Lord Of The Rings Revendell', category: 'Explorer', price: 299.99, imageUrl: '/assets/products/explorer/lotr_rivendell.webp' },
-    { id: 10, name: 'Star Wars Millennium Falcon', category: 'Explorer', price: 849.99, imageUrl: '/assets/products/explorer/sw_falcon.webp' },
-
-];
-
-const categories = ['All', 'Architecture', 'Botanical', 'Explorer', 'Technic', 'Ideas'];
-
-/**
- * A modern, responsive page to display all products with filtering and sorting.
- */
 export default function Products() {
     const searchParams = useSearchParams();
-    const category = searchParams.get('category'); 
+    const category = searchParams.get('category');
 
     const [filter, setFilter] = useState(category ?? 'All');
     const [sort, setSort] = useState('name-asc');
 
-    const filteredProducts = allProducts
+    const filteredProducts = products()
         .filter(p => filter === 'All' || p.category === filter)
         .sort((a, b) => {
             switch (sort) {
@@ -43,19 +25,6 @@ export default function Products() {
                 default: return 0;
             }
         });
-
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 },
-        },
-    };
-
-    const itemVariants: Variants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: { y: 0, opacity: 1 },
-    };
 
     return (
         <div className="bg-gray-50">
@@ -70,13 +39,13 @@ export default function Products() {
                 {/* Filter and Sort Controls */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
                     <div className="flex flex-wrap items-center gap-2">
-                        {categories.map(category => (
+                        {categories().map(category => (
                             <button
                                 key={category}
                                 onClick={() => setFilter(category)}
                                 className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors ${filter === category
-                                        ? 'bg-lego-blue text-white'
-                                        : 'bg-white text-gray-700 hover:bg-gray-200'
+                                    ? 'bg-lego-blue text-white'
+                                    : 'bg-white text-gray-700 hover:bg-gray-200'
                                     }`}
                             >
                                 {category}
@@ -102,7 +71,7 @@ export default function Products() {
                 {/* Products Grid */}
                 <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-                    variants={containerVariants}
+                    variants={containerVariants()}
                     initial="hidden"
                     animate="visible"
                 >
@@ -110,7 +79,7 @@ export default function Products() {
                         {filteredProducts.map(product => (
                             <motion.div
                                 key={product.id}
-                                variants={itemVariants}
+                                variants={productVariants()}
                                 layout
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}

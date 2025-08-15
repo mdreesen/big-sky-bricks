@@ -1,38 +1,11 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
+import { containerVariants, itemSpringVariants } from '@/lib/variants';
 
-/**
- * A modern, high-end hero section with a static LEGO background.
- * This component focuses on a clean aesthetic with subtle animations.
- */
 export default function Hero() {
-    // Animation variants for the main text content container
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.3,
-            },
-        },
-    };
-
-    // Animation variants for individual text and button elements
-    const itemVariants: Variants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: 'spring',
-                stiffness: 100,
-            },
-        },
-    };
 
     return (
         <section className="relative h-[40rem] w-full flex items-center justify-center text-center overflow-hidden">
@@ -51,23 +24,23 @@ export default function Hero() {
             {/* Centered Content */}
             <motion.div
                 className="relative z-30 flex flex-col items-center text-white px-4"
-                variants={containerVariants}
+                variants={containerVariants()}
                 initial="hidden"
                 animate="visible"
             >
                 <motion.h1
                     className="text-5xl md:text-8xl lego-font text-lego-yellow font-bold"
-                    variants={itemVariants}
+                    variants={itemSpringVariants()}
                 >
                     Big Sky Bricks
                 </motion.h1>
                 <motion.p
                     className="mt-4 text-lg md:text-2xl max-w-2xl font-semibold"
-                    variants={itemVariants}
+                    variants={itemSpringVariants()}
                 >
                     Where creativity clicks. Discover premium sets for the modern builder.
                 </motion.p>
-                <motion.div variants={itemVariants}>
+                <motion.div variants={itemSpringVariants()}>
                     <Link href={'/products'}>
                         <button
                             className="mt-8 flex items-center gap-3 bg-lego-red text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
