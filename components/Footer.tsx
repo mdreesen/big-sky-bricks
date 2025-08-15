@@ -29,7 +29,7 @@ export default function Footer() {
 
                     {/* Column 2: Connect */}
                     <div>
-                        <h4 className="font-bold text-lg mb-4">Connect</h4>
+                        <p className="font-bold text-lg mb-4">Connect</p>
                         <div className="flex items-center gap-4">
                             {/* <a href="#" aria-label="Twitter" className="bg-gray-700 p-3 rounded-full hover:bg-lego-blue transition-colors">
                                 <FaTwitter />

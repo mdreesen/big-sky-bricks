@@ -27,7 +27,7 @@ export default function Products() {
         });
 
     return (
-        <div className="bg-gray-50">
+        <div>
             <header className="bg-white shadow-md">
                 <div className="container mx-auto px-6 py-12 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-800">{`All ${filter === 'All' ? '' : filter} Collections`}</h1>
@@ -91,8 +91,8 @@ export default function Products() {
                                     <Image src={product.imageUrl} alt={product.name} height={100} width={300} className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <div className="p-6 z-10">
-                                    <p className="text-sm text-gray-500 mb-1">{product.category}</p>
-                                    <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
+                                    <p className="text-sm text-gray-600 mb-1">{product.category}</p>
+                                    <p className="text-xl font-bold text-gray-800 mb-2">{product.name}</p>
                                     <p className="text-lg font-semibold text-lego-blue">${product.price.toFixed(2)}</p>
                                 </div>
                             </motion.div>
