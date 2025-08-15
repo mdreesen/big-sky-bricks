@@ -35,7 +35,10 @@ export default function NavigationPhone() {
 
     const navItems = [
         { name: 'Main', href: '/' },
+        { name: 'Events', href: '/events' },
         { name: 'Products', href: '/products' },
+        { name: 'Contact Us', href: '/contact' },
+
         // { name: 'Services', href: '/dashboard/mind' },
         // { name: 'Events', href: '/dashboard/spirit' },
         // { name: 'Contact', href: '/dashboard/profile' },

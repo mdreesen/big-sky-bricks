@@ -44,7 +44,7 @@ export default function Collections() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
+                staggerChildren: 0.4,
             },
         },
     };
@@ -56,7 +56,7 @@ export default function Collections() {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.6,
+                duration: 0.3,
                 ease: 'easeOut',
             },
         },
