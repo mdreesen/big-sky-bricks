@@ -61,7 +61,7 @@ export default function Products() {
         <div className="bg-gray-50">
             <header className="bg-white shadow-md">
                 <div className="container mx-auto px-6 py-12 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800">All Collections</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold text-gray-800">{`All ${filter === 'All' ? '' : filter} Collections`}</h1>
                     <p className="text-gray-600 mt-4 text-lg">Find your next masterpiece.</p>
                 </div>
             </header>

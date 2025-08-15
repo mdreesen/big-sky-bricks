@@ -68,13 +68,13 @@ export default function Hero() {
                     Where creativity clicks. Discover premium sets for the modern builder.
                 </motion.p>
                 <motion.div variants={itemVariants}>
-                    <Link href={'#collections'}>
-                    <button
-                        className="mt-8 flex items-center gap-3 bg-lego-red text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
-                    >
-                        Explore Collections
-                        <FaArrowRight />
-                    </button>
+                    <Link href={'/products'}>
+                        <button
+                            className="mt-8 flex items-center gap-3 bg-lego-red text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+                        >
+                            Explore Collections
+                            <FaArrowRight />
+                        </button>
                     </Link>
                 </motion.div>
             </motion.div>
