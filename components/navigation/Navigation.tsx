@@ -13,8 +13,6 @@ export default async function Navigation() {
         { name: 'Events', href: '/events' },
         { name: 'Products', href: '/products' },
         { name: 'Contact Us', href: '/contact' },
-        // { name: 'Mind', href: '/dashboard/mind', current: false },
-        // { name: 'Spirit', href: '/dashboard/spirit', current: false },
     ]
 
     return (
@@ -26,14 +24,16 @@ export default async function Navigation() {
                             <div className="shrink-0">
                                 <Link href={'/'}>
                                     <div className="flex items-center w-[240px] text-2xl font-bold">
-                                        <Image
-                                            alt="Big Sky Bricks Logo"
-                                            width={400}
-                                            height={190}
-                                            priority
-                                            src={'/assets/logo.webp'}
-                                            className="relative rounded-full object-cover scale-75"
-                                        />
+                                        <div className='relative right-14 w-[250px]'>
+                                            <Image
+                                                alt="Big Sky Bricks Logo"
+                                                width={400}
+                                                height={190}
+                                                priority
+                                                src={'/assets/logo.webp'}
+                                                className="relative object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 </Link>
                             </div>

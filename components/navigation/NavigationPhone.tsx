@@ -45,15 +45,17 @@ export default function NavigationPhone() {
             <div className="flex justify-between items-center h-[2rem]">
                 {/* Logo/Brand Name */}
                 <Link href={'/'}>
-                    <div className="flex flex-col text-2xl lego-font w-[240px]">
+                    <div className="flex flex-col text-2xl lego-font">
+                        <div className='relative right-14 w-[250px]'>
                         <Image
                             alt="Big Sky Bricks Logo"
                             width={400}
                             height={190}
                             priority
                             src={'/assets/logo.webp'}
-                            className="relative object-cover scale-75 lg:hidden md:hidden"
+                            className="relative object-cover lg:hidden md:hidden"
                         />
+                        </div>
                     </div>
 
                 </Link>
