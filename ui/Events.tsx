@@ -25,7 +25,7 @@ export default function Events() {
                     initial="hidden"
                     animate="visible"
                 >
-                     {events().map((event) => (
+                    {events().map((event) => (
                         <motion.div
                             key={event.id}
                             variants={itemVariants()}
@@ -61,7 +61,7 @@ export default function Events() {
 
                 {/* Birthday Parties Section */}
                 <div className="mt-24 pt-16 border-t border-gray-200">
-                     <motion.div 
+                    <motion.div
                         className="text-center mb-16"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Events() {
                         <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">Create unforgettable memories. Select a package below to view available dates and book your party instantly.</p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                         variants={containerVariants()}
                         initial="hidden"
@@ -80,7 +80,7 @@ export default function Events() {
                         viewport={{ once: true, amount: 0.2 }}
                     >
                         {birthdayPackages().map((pkg) => (
-                            <motion.div 
+                            <motion.div
                                 key={pkg.title}
                                 variants={itemVariants()}
                                 className={`bg-white rounded-lg shadow-lg p-8 flex flex-col border-t-4 border-lego-${pkg.color}`}

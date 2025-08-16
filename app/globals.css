@@ -18,6 +18,13 @@ body {
 .bg-lego-blue {
   background-color: #0067A0;
 }
+
 .text-lego-yellow {
   color: #f6ec35;
+}
+.text-lego-red {
+  color: #d11013;
+}
+.text-lego-blue {
+  color: #0067A0;
 }
