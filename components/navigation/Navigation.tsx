@@ -31,7 +31,7 @@ export default async function Navigation() {
                                                 height={190}
                                                 priority
                                                 src={'/assets/logo.webp'}
-                                                className="relative object-cover"
+                                                className="relative object-cover scale-75"
                                             />
                                         </div>
                                     </div>

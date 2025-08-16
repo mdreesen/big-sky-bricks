@@ -53,7 +53,7 @@ export default function NavigationPhone() {
                             height={190}
                             priority
                             src={'/assets/logo.webp'}
-                            className="relative object-cover lg:hidden md:hidden"
+                            className="relative object-cover scale-75 lg:hidden md:hidden"
                         />
                         </div>
                     </div>
