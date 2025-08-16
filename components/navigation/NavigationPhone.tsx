@@ -38,10 +38,6 @@ export default function NavigationPhone() {
         { name: 'Events', href: '/events' },
         { name: 'Products', href: '/products' },
         { name: 'Contact Us', href: '/contact' },
-
-        // { name: 'Services', href: '/dashboard/mind' },
-        // { name: 'Events', href: '/dashboard/spirit' },
-        // { name: 'Contact', href: '/dashboard/profile' },
     ];
 
     return (
@@ -49,15 +45,14 @@ export default function NavigationPhone() {
             <div className="flex justify-between items-center h-[2rem]">
                 {/* Logo/Brand Name */}
                 <Link href={'/'}>
-                    <div className="flex flex-col text-2xl lego-font">
-
+                    <div className="flex flex-col text-2xl lego-font w-[240px]">
                         <Image
                             alt="Big Sky Bricks Logo"
-                            width={150}
-                            height={150}
+                            width={400}
+                            height={190}
                             priority
                             src={'/assets/logo.webp'}
-                            className="opacity-60 relative rounded-full object-cover scale-75 lg:hidden md:hidden"
+                            className="relative object-cover scale-75 lg:hidden md:hidden"
                         />
                     </div>
 

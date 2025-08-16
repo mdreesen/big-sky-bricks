@@ -62,7 +62,7 @@ export function events() {
             time: '7:00 PM - 10:00 PM',
             location: 'Big Sky Bricks Showroom, Evergreen, MT',
             description: 'An exclusive evening of complex builds and good company. Challenge your skills with our featured Technic sets.',
-            imageUrl: '/assets/events/adult_night.webp',
+            imageUrl: '/assets/events/events_adults.webp',
             googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Adults+Night%3A+LEGO+%26+Libations&dates=20250823T010000Z/20250823T040000Z&details=An+exclusive+21%2B+evening+of+complex+builds%2C+craft+beers%2C+and+good+company.+Challenge+your+skills+with+our+featured+Technic+sets.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
         },
         {
@@ -72,7 +72,7 @@ export function events() {
             time: '1:00 PM - 3:00 PM',
             location: 'Kalispell Community Center',
             description: 'Ready, set, build! A fun-filled afternoon for our younger builders to test their speed and creativity for prizes.',
-            imageUrl: '/assets/events/speed_challenge.webp',
+            imageUrl: '/assets/events/events_speed.webp',
             googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Kids%27+Speed+Build+Challenge&dates=20250830T190000Z/20250830T210000Z&details=Ready%2C+set%2C+build!+A+fun-filled+afternoon+for+our+younger+builders+(ages+6-12)+to+test+their+speed+and+creativity+for+prizes.&location=Kalispell+Community+Center',
         },
         {
@@ -82,7 +82,7 @@ export function events() {
             time: '10:00 AM - 4:00 PM',
             location: 'Big Sky Bricks Showroom, Evergreen, MT',
             description: 'Explore incredible My Own Creations (MOCs) from talented builders across the state. A day of inspiration and community.',
-            imageUrl: '/assets/events/montana_moc_showcase.webp',
+            imageUrl: '/assets/events/events_showcase.webp',
             googleCalendarLink: 'https://www.google.com/calendar/render?action=TEMPLATE&text=Montana+MOC+Showcase&dates=20250920T160000Z/20250920T220000Z&details=Explore+incredible+My+Own+Creations+(MOCs)+from+talented+builders+across+the+state.+A+day+of+inspiration+and+community.&location=Big+Sky+Bricks+Showroom%2C+Evergreen%2C+MT',
         },
     ];

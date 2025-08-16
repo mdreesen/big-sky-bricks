@@ -11,7 +11,7 @@ export default async function Navigation() {
     const navigation = [
         { name: 'Main', href: '/' },
         { name: 'Events', href: '/events' },
-        { name: 'Products', href: '/products'},
+        { name: 'Products', href: '/products' },
         { name: 'Contact Us', href: '/contact' },
         // { name: 'Mind', href: '/dashboard/mind', current: false },
         // { name: 'Spirit', href: '/dashboard/spirit', current: false },
@@ -25,14 +25,14 @@ export default async function Navigation() {
                         <div className="flex items-center">
                             <div className="shrink-0">
                                 <Link href={'/'}>
-                                    <div className="flex items-center h-[40px] text-2xl font-bold">
+                                    <div className="flex items-center w-[240px] text-2xl font-bold">
                                         <Image
                                             alt="Big Sky Bricks Logo"
-                                            width={150}
-                                            height={150}
+                                            width={400}
+                                            height={190}
                                             priority
                                             src={'/assets/logo.webp'}
-                                            className="opacity-60 relative rounded-full object-cover scale-75"
+                                            className="relative rounded-full object-cover scale-75"
                                         />
                                     </div>
                                 </Link>
