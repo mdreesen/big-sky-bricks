@@ -16,25 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://example.com'),
+  // metadataBase: new URL('https://example.com'),
   title: {
     template: '%s | Big Sky Bricks',
     default: 'Big Sky Bricks',
   },
   description: 'Your destination for all things LEGO in Kalispell, Montana',
-  alternates: {
-    canonical: 'https://example.com',
-    languages: {
-      'en-US': 'https://example.com/en-US',
-      'de-DE': 'https://example.com/de-DE'
-    }
-  },
+  // alternates: {
+  //   canonical: 'https://example.com',
+  //   languages: {
+  //     'en-US': 'https://example.com/en-US',
+  //     'de-DE': 'https://example.com/de-DE'
+  //   }
+  // },
   openGraph: {
     title: 'Big Sky Bricks',
     description: 'Your destination for all things LEGO in Kalispell, Montana',
-    url: 'https://example.com',
-    siteName: 'My Site',
-    images: [{ url: 'https://example.com/og.png' }]
+    // url: 'https://example.com',
+    siteName: 'Big Sky Bricks',
+    // images: [{ url: 'https://example.com/og.png' }]
   },
 };
 
@@ -48,10 +48,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navigation/>
-        <NavigationPhone/>
+        <Navigation />
+        <NavigationPhone />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

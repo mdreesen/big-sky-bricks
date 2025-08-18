@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { brickVariants } from '@/lib/variants';
 
 interface NavLinkProps {
     href: string;
@@ -15,11 +16,6 @@ interface NavLinkProps {
 
 const NavLink = ({ href, label, color, colorLight, textColor }: NavLinkProps) => {
     const [isHovered, setIsHovered] = useState(false);
-
-    const brickVariants = {
-        hidden: { opacity: 0, y: 5, scale: 0.9 },
-        visible: { opacity: 1, y: 0, scale: 1 },
-    };
 
     return (
         <motion.a
@@ -33,7 +29,7 @@ const NavLink = ({ href, label, color, colorLight, textColor }: NavLinkProps) =>
             <AnimatePresence>
                 {isHovered && (
                     <motion.div
-                        variants={brickVariants}
+                        variants={brickVariants()}
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
