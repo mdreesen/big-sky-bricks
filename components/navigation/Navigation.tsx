@@ -60,10 +60,10 @@ const NavLink = ({ href, label, color, colorLight, textColor }: NavLinkProps) =>
 
 
 const navLinksData: NavLinkProps[] = [
-    { href: '#about', label: 'About', color: 'bg-lego-yellow', colorLight: '#DBAC34', textColor: '#000000' },
-    { href: '#products', label: 'Collections', color: 'bg-lego-red', colorLight: '#8B0000', textColor: '#FFFFFF' },
-    { href: '#services', label: 'Services', color: 'bg-lego-blue', colorLight: '#2032B0', textColor: '#FFFFFF' },
-    { href: '#contact', label: 'Contact', color: 'bg-lego-green', colorLight: '#184632', textColor: '#FFFFFF' },
+    { href: '/', label: 'Main', color: 'bg-lego-yellow', colorLight: '#DBAC34', textColor: '#000000' },
+    { href: '/events', label: 'Events', color: 'bg-lego-red', colorLight: '#8B0000', textColor: '#FFFFFF' },
+    { href: '/products', label: 'Products', color: 'bg-lego-blue', colorLight: '#2032B0', textColor: '#FFFFFF' },
+    { href: '/contact', label: 'Contact Us', color: 'bg-lego-green', colorLight: '#184632', textColor: '#FFFFFF' },
 ];
 
 
