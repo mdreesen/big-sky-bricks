@@ -70,7 +70,7 @@ const navLinksData: NavLinkProps[] = [
 export default function Navigation() {
 
     return (
-        <header className="top-0 left-0 w-full h-[5rem] z-50 bg-white/80 backdrop-blur-md shadow-sm hidden sm:block md:block">
+        <header className="top-0 left-0 w-full h-[5rem] z-50 bg-white/80 backdrop-blur-md hidden sm:block md:block">
             <nav className="container mx-auto px-6 py-4 h-[5rem] flex justify-between items-center">
                 {/* Logo */}
                 <Link href={'/'}>
