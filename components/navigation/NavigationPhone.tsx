@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-// import { current_year } from '@/lib/date_time';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LegoIconThreeStacked, LegoIconX } from '@/components/LegoIcon';
